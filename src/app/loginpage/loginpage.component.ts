@@ -10,15 +10,21 @@ const emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
 export class LoginpageComponent implements OnInit {
   user: FormGroup = this.fb.group({
-    name: ['', Validators.required,Validators.minLength(10)],
-    email: ['', Validators.required,Validators.pattern(emailPattern)],
-    password: ['', Validators.required]
+    name: ['',[ Validators.required,Validators.minLength(10)]],
+    email: ['', [Validators.required]],
+    password: ['', Validators.required],
+    age: ['', Validators.required]
   });
+
 
   constructor(private fb: FormBuilder) {  }
 
 
   
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.user.valueChanges.subscribe((val)=>{
+      console.log(val , 'va');
+    })
+   }
 }
