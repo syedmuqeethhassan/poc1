@@ -9,8 +9,13 @@ import { BillingComponent } from './billing/billing.component';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {AccordionModule} from 'primeng/accordion';
-import {MenuItem} from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
+import {MenuItem, MessageService} from 'primeng/api';
 import {InputNumberModule} from 'primeng/inputnumber';
+import { Loginpage2Component } from './loginpage2/loginpage2.component';
+import {CalendarModule} from 'primeng/calendar';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {DropdownModule} from 'primeng/dropdown';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,12 +23,17 @@ import {InputNumberModule} from 'primeng/inputnumber';
     ProductsComponent,
     BillingComponent,
     LoginpageComponent,
+    Loginpage2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    InputNumberModule
+    InputNumberModule,
+    CalendarModule,
+    BrowserAnimationsModule,
+    DropdownModule,
+    
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

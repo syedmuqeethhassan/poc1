@@ -1,0 +1,20 @@
+.row{
+    height: 100vh;
+    background-color: rgb(212, 205, 197);
+}
+/* .col-md-5 offset-md-9{
+    justify-content: center;
+} */
+.login-container {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn{
+    display:flex;
+    flex-direction: row;
+    margin-top:10px;
+    width: inherit;
+    justify-self: center;
+}
