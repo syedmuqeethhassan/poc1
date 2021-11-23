@@ -3,6 +3,9 @@ import { Validators } from '@angular/forms';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {CalendarModule} from 'primeng/calendar';
 import { stringify } from 'querystring';
+import { FormFields } from '../shared/form-fields';
+import { CustomValidations } from '../shared/validate';
+import { ValidationMessages } from '../shared/validationmessages';
 
 @Component({
   selector: 'app-loginpage2',
@@ -11,6 +14,8 @@ import { stringify } from 'querystring';
 })
 
 export class Loginpage2Component implements OnInit {
+  userFormFields = FormFields.user;
+  userValidationMessages = ValidationMessages.usermessages;
   user: FormGroup = this.fb.group({
     age:['',[Validators.required]],
     dateofbirth:['',[Validators.required]] ,
@@ -22,7 +27,14 @@ export class Loginpage2Component implements OnInit {
     {label: "10-15", value: "10-15"}
   ];
   constructor(private fb: FormBuilder) {}
-
+  login(){
+    if(this.user.valid){
+      console.log('valid')
+    }
+    else{
+      console.log('invalid')
+    }
+  }
   ngOnInit(): void {
   }
 

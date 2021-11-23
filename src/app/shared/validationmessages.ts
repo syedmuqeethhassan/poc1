@@ -14,14 +14,26 @@ export class ValidationMessages {
             maxlength:'Name cannot exceed 20 characters'
         },
         dateofbirth: {
-            required: 'Age is required',
+            required: 'dob is required',
         },
         age: {
             required: 'Age is required',
         },
         number: {
-            required: 'Age is required',
+            required: 'number is required',
+            pattern:'invalid number'
         },
     }
-    
+    static usermessages={
+        dateofbirth: {
+            required: 'dob is required',
+        },
+        age: {
+            required: 'Age is required',
+        },
+        number: {
+            required: 'number is required',
+            pattern:'invalid number'
+        },
+    }
 }

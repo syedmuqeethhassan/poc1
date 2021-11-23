@@ -8,4 +8,9 @@ export class FormFields {
       number:'',
 
   }
+  static user = {
+    dateofbirth:'',
+      age:'',
+      number:'',
+  }
 }
