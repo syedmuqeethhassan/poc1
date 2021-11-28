@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-5 offset-md-5 justify-content-center">
+        <div class="login-container">
+            <h2>
+                log in
+            </h2>
+            <form [formGroup]="userform">
+                
+                <div class="form-group">
+                    <label for="exampleInputEmail1">date  of birth </label><br>
+                        <p-calendar formControlName="dateofbirth" dateFormat="dd.mm.yy"></p-calendar>
+                        <span class="alert-error">{{userFormFields.dateofbirth}}</span>
+                </div>
+                <div class="form-group">
+
+                    <label for="exampleInputEmail1">age</label><br>
+                    <p-dropdown [options]="ageValue" optionValue="value" formControlName="age" optionLabel="label"></p-dropdown>
+                    <span class="alert-error">{{userFormFields.age}}</span>
+                    
+                </div>
+                <div class="form-group">
+                <label for="exampleInputEmail1">number</label><br>
+                <input type="text" class="form-control" id="exampleInputEmail1" required minlength="10" aria-describedby="emailHelp"
+                            placeholder="Enter number" name="numbner" formControlName="number">
+                            <span class="alert-error">{{userFormFields.number}}</span>
+
+                </div>
+            </form>
+            </div>
+        </div>

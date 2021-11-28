@@ -1,0 +1,103 @@
+
+
+
+
+
+<p-splitter [style]="{'height': '200px'}" [panelSizes]="[20,80]" >
+    <ng-template pTemplate>
+        <div style="padding: 20px; width: 100%;">
+            <img style="width: 100%;height: 70%" src="https://upload.wikimedia.org/wikipedia/commons/9/90/Care_health_insurance_logo.png">
+            <div style="padding-left: 30px;">
+                11 more plans
+            </div>
+        </div>
+        
+    </ng-template>
+    <ng-template pTemplate>
+        <p-splitter [style]="{'height': '200px'}" [panelSizes]="[60,40]" layout="vertical">
+            <ng-template pTemplate>
+               <div style="height: inherit;
+               border: 5px;
+               width: 30%;
+               border-color: #000000;
+               border-style: none;"> 
+               <div style="margin: 50px;">
+                care
+               </div >
+               </div>
+
+
+               <div style="height: inherit;
+               width: 15%;
+               border:5px;
+               border-color: black;
+               border-style: none;">
+               <div style="margin:40px;">
+                   cover
+                <div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary dropdown-toggle" style="background-color: white; color: black;border-color: white;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          5.5L
+                        </button>
+                    </div>
+                </div>
+               </div>
+               </div>
+
+               <div style="height: inherit;
+               width: 20%;
+               border:5px;
+               border-color: black;
+               border-style: none;">
+               <div style="margin: 40px;">
+                cashless hospitals
+                <div class="btn-group dropright">
+                    <button type="button" class="btn btn-secondary dropdown-toggle"  style="border-color: white;background-color: white;color: black;" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      160
+                    </button>
+                </div>
+               </div>
+
+               </div>
+               <div style="height: inherit;
+               width: 25%;
+               border:5px;
+               border-color: black;
+               border-style: none;">
+               <div style="margin: 30px;
+               width: 70%;">
+                <button pButton type="button"  class="p-button-danger custombutton"> 409/month</button>
+               </div>
+
+               </div>
+               <div style="height: inherit;
+               width: 10%;
+               border:5px;
+               border-color: black;
+               border-style: none;">
+               <div style="padding: 20px;">
+                <p-button icon="pi pi-bookmark" iconPos="right"></p-button>
+
+               </div>
+
+               </div>
+            </ng-template>
+            <ng-template pTemplate>
+               <div style="width: 50px;padding-left: 10px;padding-top: 10px;">
+                <i class="pi pi-check"></i>
+               </div>
+
+               <div style="width: 15%;padding-top: 10px;">
+                add to compare
+               </div>
+               <div style="color: green;padding-top:10px;">
+                view features
+               </div>
+
+               <div style="padding-left:400px;padding-top: 10px;">
+                <i class="pi pi-star"></i> telemedical |   4 year waiting period               
+            </div>
+            </ng-template>
+        </p-splitter>
+    </ng-template>
+</p-splitter>
