@@ -22,7 +22,7 @@ export class CustomValidations {
         for (const field in formFields) {
             formFields[field] = '';
             const input = formGroup.get(field);
-            if (input.invalid && input.dirty || input.invalid && input.touched) {
+            if (input && input.invalid && input.dirty || input && input.invalid && input.touched) {
                 // tslint:disable-next-line:forin
                 for (const errors in input.errors) {
                     // console.log(errors, input);

@@ -1,0 +1,11 @@
+.custombutton{
+    width: inherit;
+    height: 30px;
+}
+.btn-group{
+    background-color: white;
+}
+.btn-group dropright{
+    background-color: white;    
+
+}

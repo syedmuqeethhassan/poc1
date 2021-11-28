@@ -13,14 +13,14 @@ import { NgZone } from '@angular/core';
 const emailPattern = "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$";
 
 @Component({
-  selector: 'app-loginpage',
-  templateUrl: './loginpage.component.html',
-  styleUrls: ['./loginpage.component.css'],
-  providers: [CustomValidations,]
+  selector: 'app-detailspage',
+  templateUrl: './detailspage.component.html',
+  styleUrls: ['./detailspage.component.css'],
+  providers: [CustomValidations]
 })
 
 
-export class LoginpageComponent implements OnInit {
+export class DetailspageComponent implements OnInit {
   loginForm: FormGroup;
   loginFormFields = FormFields.loginForm;
   loginValidationMessages = ValidationMessages.loginMessages;
@@ -58,10 +58,17 @@ export class LoginpageComponent implements OnInit {
            summary: "Success Message",
            detail: "Order submitted"
         });}
-        setTimeout(() => {this.router.navigateByUrl('/loginpage2')}, 1000);
+        setTimeout(() => {this.router.navigateByUrl('/detailspage2')}, 1000);
     console.log("this works");
+    console.log(this.loginForm.value)
+    var data:any;
+    let myobj=this.loginForm.value;
+    sessionStorage.setItem(data,JSON.stringify(myobj));
+    let item=JSON.parse(sessionStorage.getItem(data));
     }
     else{
       this._customValidation.validateAllFormFields(this.loginForm, this.loginFormFields, this.loginValidationMessages);
     }
    }}
+
+
