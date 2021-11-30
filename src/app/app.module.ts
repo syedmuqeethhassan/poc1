@@ -21,6 +21,9 @@ import {PrimeIcons} from 'primeng/api';
 import { PlanComponent } from './plan/plan.component';
 import { Plan1Component } from './plan1/plan1.component';
 import { PlancardComponent } from './plancard/plancard.component';
+import {TabMenuModule} from 'primeng/tabmenu';
+import {DialogModule, Dialog} from 'primeng/dialog'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +45,10 @@ import { PlancardComponent } from './plancard/plancard.component';
     BrowserAnimationsModule,
     DropdownModule,
     ToastModule,
-    SplitterModule
+    SplitterModule,
+    TabMenuModule,
+    DialogModule,
+    ButtonModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [MessageService],

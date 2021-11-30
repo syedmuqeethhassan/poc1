@@ -2,31 +2,32 @@
     <div style="display: block;text-align: center;">
         healthcare website
     </div>
-<div style="padding: 10px;">
-    <ul class="nav nav-pills">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">about us</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" routerLink="/home">products</a>
-        </li>  
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">terms and conditions</a>
-        </li> 
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="#">contact</a>
-        </li> 
-    </ul>
-</div>
+    <div style="padding: 10px;">
+
+        <p-tabMenu [model]="items">
+            <ng-template pTemplate="item" let-item let-i="index">
+                {{item.label}}
+            </ng-template>
+        </p-tabMenu>
+        
+    
+    
+    </div>
 </div>
 
+
+
 <div style="display: flex;height: 50px;width: 100%;">
+    <div>
+        
+    </div>
 
 </div>
 
 <div style="display: flex">
 
     <div style="border-color: black;border-style: none;width: 20%;height: 500px;">
+        
     </div>
 
     <div style="border-color: black;border-style: none;width: 55%;height: 500px; display: flex;">
@@ -104,26 +105,130 @@
 
     </div>
     <div style="height: 50px;border-top-color:lightslategrey ; border-style: none;margin-top: 5px;display: flex;">
-        <div style="width: 50px;padding-left: 10px;padding-top: 10px;">
+        <div style="width: 50px;padding-left: 10px;padding-top: 20px;">
             <i class="pi pi-check"></i>
         </div>
 
-        <div style="width: 20%;padding-top: 10px;">
+        <div style="width: 20%;padding-top: 20px;">
             add to compare
         </div>
+        <div >
+            <p-dialog  [(visible)]="display" [style]="{width: '100%',height:'100%',display:'flex',float:'right'}">
+                <div style="width:20%;height:100%;border-style:none;border-color:black;float:left;background-color:#000066;margin:20px">
+                    <p-dialog-titlebar style="background-color:#000066">
+                        <p-dialog-title style="background-color:#000066">
 
+                        </p-dialog-title>
+
+                    </p-dialog-titlebar>
+                <div style="height:100px;width:100px;background-color:white;float:center;margin:20px;">
+                    <img style="width: 100%;height: 70%" src="https://upload.wikimedia.org/wikipedia/commons/9/90/Care_health_insurance_logo.png">
+
+                </div>
+
+                <div style="height:150px;width:100%;border-top:1px solid grey;display:flex;color:white">
+                <div style="padding 10px;border-top:none;margin-top:20px;margin-left:0px;float:left">
+                    <div style="margin-left:20px">
+                       cover 
+                    </div>
+
+                    <div style=" margin:20px;margin-top:10px">
+                        <div class="btn-group">
+                            <button class="btn btn-secondary dropdown-toggle" style="background-color: white; color: black;border-color: white;" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              5.5L
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div style="padding-left:40px;padding-top:20px">
+                    <span >premium</span>
+                    <span style="margin-top:30px;font-size:30"> 569/month</span>
+                </div>
+            </div>
+            <div style="border-top:1px solid grey;color:white">
+                <div style="display:flex;float:left">
+                    <div style="padding-top:10px;padding-left:10px;float:left"> 
+                        claim Settlement ratio
+                        <div>
+                            95%
+                        </div>
+                    
+                    </div>
+                    
+                </div>
+                <div style="float:right;padding-top:10px">
+                    <i class="pi pi-bookmark" style="font-size: 2rem;padding-left:50px;"></i>
+                </div>
+            </div>
+
+
+
+
+                </div>
+
+                <div style="width:75%;float:right;">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" Style="background-color:white">
+                        <li class="nav-item" role="presentation" style="color:black">
+                          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">highlights</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="color:black">
+                          <button class="nav-link active" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">features</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="color:black">
+                          <button class="nav-link active" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Claim process</button>
+                        </li>
+                        <li class="nav-item" role="presentation" style="color:black">
+                            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="false"> cashless hospitals</button>
+                          </li>
+                          <li class="nav-item" role="presentation" style="color:black">
+                            <button class="nav-link active " id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="false"> portability</button>
+                          </li>
+                      </ul>
+                      <div class="tab-content" id="myTabContent" style="color:black">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div style="margin:10px;padding:20px;border-bottom:1px solid grey;">
+                            we are certified 5 star partner for health care
+                            </div>
+                            <div style="margin:10px;padding:20px;border-bottom:1px solid grey;"  >
+                                95% Claim Settlement Ratio
+                                This is explained as (Number of Claims Settled / Number of Claims) by the Insurance Company.
+                                Source: Insurance Brokers Association of India Claims Handbook, Jan 2021
+                                Claim Settlement ratio for Covid-19 is 97% as per Insurer.
+                                Total Covid claims paid - ₹355 Cr., Total number of Covid claims - 31,384 (approved + paid), Total number of cashless Covid claims - 18,879 (approved + paid).
+                            </div>
+                            <div style="margin:10px;padding:20px;border-bottom:1px solid grey;"  >
+                                Coverage for Covid-19
+                                What is covered:
+                                1. Hospitalization
+                                2. Consumables covered by IRDAI regulations
+                                3. Hospitalization at Home
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>
+                        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+                      </div>
+                      
+                        <button pButton type="button" style="float: right;
+                        bottom: 0;" class="p-button-raised ">proceed to buy</button>
+                    
+                </div>
+            </p-dialog>
         <div style="color: green;padding-top:10px;">
-            view features
+            <button pButton type="button" (click)="showDialog()" style="color:green;" label="view features" class="p-button-text"></button>
+        </div>
         </div>
 
-        <div style="padding-left:100px;padding-top: 10px;">
+        <div style="padding-left:100px;padding-top: 20px;">
             <i class="pi pi-star"></i> telemedical |   4 year waiting period               
         </div>
         
 
 
     </div>
+    
 
+   
     
 
 </div>
